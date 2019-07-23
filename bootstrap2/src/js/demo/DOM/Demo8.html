@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="refresh"  type="button" value="刷新">
+<input id="goto"  type="button" value="去我的网站">
+
+<script>
+    //获取按钮
+    var fresh=document.getElementById("refresh");
+    //绑定事件
+    fresh.onclick=function(){
+        location.reload();   //刷新页面
+        }
+
+    var href=location.href;
+    alert(href);
+
+    //获取按钮
+    var goto=document.getElementById("goto");
+    //绑定事件
+    goto.onclick=function(){
+        location.href="http://59.110.243.60:8080";  //改变当前页面的链接
+        }
+
+</script>
+</body>
+</html>

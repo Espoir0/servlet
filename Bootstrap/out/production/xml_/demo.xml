@@ -1,0 +1,17 @@
+<?xml version='1.0' ?>
+<users>
+    <user id='1'>
+        <name>aa</name>
+        <age>19</age>
+    </user>
+    <user id='2'>
+        <name>aa</name>
+        <age>19</age>
+
+        <code>
+            <![CDATA[
+                if(a<b){}
+            ]]]>
+        </code>
+    </user>
+</users>

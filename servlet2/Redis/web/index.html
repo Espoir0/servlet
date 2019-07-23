@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        //入口函数
+        $(function () {
+            //发送ajax请求获取所有数据
+            //[{"id":1,"heroname":null,"skill":"青莲剑歌"},{"id":2,"name":null,"skill":"无敌是我"},{"id":3,"heroname":null,"skill":"一骑当千"}]
+            $.get("heroServlet",{},function (data) {
+                alert(data);
+                //获取select
+                var hero=$("#hero");
+                //遍历json数组
+                $(data).each(function () {
+                    //3.创建<option>
+                    var option="<option name='"+this.id+"'>"+this.name+"</option>";
+                    //4.调用select的append追加option
+                    hero.append(option);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<select id="hero">
+    <option >请选择英雄</option>
+</select>
+</body>
+</html>

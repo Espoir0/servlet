@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js">
+
+    </script>
+</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<script>
+    //通过js方式获取名称叫div的所有html元素,使其标签体内容变为“aaa”
+    var divs=document.getElementsByTagName("div"); //可以当做数组使用
+    for (var i=0 ;i<divs.length;i++){
+        divs[i].innerHTML="aaa";
+        $(divs).html("aaa");//js对俩转为jq对象
+    }
+
+    //通过js方式获取名称叫div的多有html元素使其标签体内容变为“bbb”
+    var $divs=$("div");  //可以当做数组使用
+    $divs.html("bbb");
+    $divs.get[i].innerHTML="bbb";   //jq->js
+    $divs[i].innerHTML="bbb";
+
+    /*
+     jq操作方便， jq和js对象的方法不通用
+     2.两者互相转化
+      jq->js
+      js->jq    $(js对象)
+     */
+</script>
+</body>
+</html>

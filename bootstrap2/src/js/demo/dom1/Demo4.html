@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        table{
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name"  placeholder="请输入姓名">
+    <input type="text" id="gender"  placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+
+</div>
+
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="del_a(this)">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="del_a(this)">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0) " onclick="del_a(this)">删除</a></td>
+    </tr>
+
+    <script>
+        /*
+
+             //1.给添加按钮绑定事件
+        document.getElementById("btn_add").onclick=function(){
+
+        //2.获取文本框的内容
+            var id=document.getElementById("id").value;
+            var name=document.getElementById("name").value;
+            var gender=document.getElementById("gender").value;
+
+
+
+            //创建td赋值 td_id的标签体
+            var td_id=document.createElement("td");    //创建td元素
+            var text_id=document.createTextNode(id);  //转为文本结点
+            td_id.appendChild(text_id);
+
+
+
+            //创建td_name赋值   td_name的标签体
+            var td_name=document.createElement("td");
+            var text_name=document.createTextNode(name);  //转为文本结点，不能直接添加字符串
+            td_name.appendChild(text_name);
+
+            //创建td_gender 赋值 td_gender的标签体
+            var td_gender=document.createElement("td");
+            var text_gender=document.createTextNode(gender);  //转为文本结点，不能直接添加字符串
+            td_gender.appendChild(text_gender);
+
+            //创建td_a标签
+            var td_a=document.createElement("td");
+            var a=document.createElement("a");
+            a.setAttribute("href","javascript:void(0)");
+            a.setAttribute("onclick","del_a(this)");
+            var text_a=document.createTextNode("删除");
+            a.appendChild(text_a);
+            td_a.appendChild(a);
+
+            //创建 tr,添加td到 tr中
+            var tr=document.createElement("tr");
+            tr.appendChild(td_id);
+            tr.appendChild(td_name);
+            tr.appendChild(td_gender);
+            tr.appendChild(td_a);
+
+
+            //获取table 添加tr到 table中
+            var table=document.getElementsByTagName("table")[0];  //返回的是数组
+            table.appendChild(tr);
+
+        }
+
+        */
+
+             //1.给添加按钮绑定事件
+        document.getElementById("btn_add").onclick=function(){
+
+                //2.获取文本框的内容
+            var id=document.getElementById("id").value;
+            var name=document.getElementById("name").value;
+            var gender=document.getElementById("gender").value;
+
+            //获取table
+            var table=document.getElementsByTagName("table")[0];
+            table.innerHTML+="<tr>\n"+
+                                "<td>"+id+"</td>\n"+
+                                "<td>"+name+"</td>\n"+
+                                "<td>"+gender+"</td>\n"+
+                                "<td><a href=\"javascript:void(0)\" onclick=\"del_a(this)\">删除</a></td>\n"+
+                            "</tr>\n";
+        }
+
+
+        function del_a(obj){
+            //alert(obj);   //上面的this参数代表当前的链接  a
+            var table=obj.parentNode.parentNode.parentNode;  //获取table
+            var tr=obj.parentNode.parentNode;  //获取tr
+            table.removeChild(tr);   //删除tr
+        }
+    </script>
+</table>
+
+</body>
+</html>

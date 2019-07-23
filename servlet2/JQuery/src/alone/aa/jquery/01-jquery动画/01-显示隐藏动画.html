@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        function hideFn() {
+            /*$("#showDiv").hide(5000,"linear",function () {
+                alert("隐藏了")
+            });*/
+            //$("#showDiv").hide("slow","swing");
+            //$("#showDiv").slideUp("slow","swing");
+            $("#showDiv").fadeOut("slow","swing");
+
+        }
+        function showFn() {
+            //$("#showDiv").show("normal","linear");
+            //$("#showDiv").slideDown("normal","linear");
+            $("#showDiv").fadeIn("normal","linear");
+        }
+        function toggleFn() {
+            //$("#showDiv").toggle("normal");
+            //$("#showDiv").slideToggle("normal");
+            $("#showDiv").fadeToggle("normal");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="点击按钮隐藏div" onclick="hideFn()">
+<input type="button" value="点击按钮显示div" onclick="showFn()">
+<input type="button" value="点击按钮切换div显示和隐藏" onclick="toggleFn()">
+
+<div id="showDiv" style="width:300px;height:300px;background:pink">
+    div显示和隐藏
+</div>
+</body>
+</html>

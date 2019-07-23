@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //定义json对象
+        var person={
+            name:"李白",
+            skill:"青莲剑歌",
+            ranking:"1"
+        }
+        //获取json对象的值
+        var name=person.name;
+        var name=person["name"];
+
+
+        var persons={persons:[{"name":"李白","skill":"青莲剑歌"},
+                                {"name":"雅典娜","skill":"无敌"}
+                                ]}
+        //获取对象的值，是一个数组，然后通过索引获取对应的值
+        var name1=persons.persons[1].name;
+        alert(name1);
+
+        var persons2=[{"name":"李白","skill":"青莲剑歌"},
+                {"name":"雅典娜","skill":"无敌"}];
+        var name2=persons2[1].name;
+        alert(name2);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

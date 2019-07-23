@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="light" src="img/off.gif" alt="灯泡">
+
+<script>
+
+    var light=document.getElementById("light");
+    var flag=false;
+
+
+    light.onclick=function(){
+        if(flag){
+            light.src="img/off.gif";
+            flag=false;
+        }else{
+            light.src="img/on.gif";
+            flag=true;
+        }
+    }
+
+
+     function fun(){
+        if(flag){
+            light.src="img/off.gif";
+            flag=false;
+        }else{
+            light.src="img/on.gif";
+            flag=true;
+        }
+     }
+    light.onclick=fun;
+
+</script>
+</body>
+</html>

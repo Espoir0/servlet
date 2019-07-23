@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function fun(){
+        alert("boom~~~~");
+    }
+        var id1=setTimeout("fun();",2000);  //一次性定时器
+    var id2=setTimeout(fun,2000);    //推荐这样写
+    var id3=setInterval(fun,1000);   //循环定时器
+    clearTimeout(id3);     //取消定时器
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //定义json对象
+        var person={
+            name:"李白",
+            skill:"青莲剑歌",
+            ranking:"1"
+        }
+
+        //遍历json
+        for(var key in person){
+            alert(key+":"+person[key]);
+        }
+
+
+        var persons2=[{"name":"李白","skill":"青莲剑歌"},
+                {"name":"雅典娜","skill":"无敌"}];
+
+        for(var i=0;i<persons2.length;i++){
+            var p=persons2[i];
+            for(key in p){
+                alert(key+":"+p[key])
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

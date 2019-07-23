@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        //定义方法
+        function fun() {
+            //使用 $.ajax() 发送异步请求
+            $.ajax({
+                url:"ajaxServlet",//请求路径
+                type:"POST",      //请求方式
+                //data : "username=libai&age=21." //请求参数
+                //一般这样写,等效于上面那样json格式
+                data:{
+                    "username":"libai",
+                    "age":21,
+                },
+                //服务器响应成功后自动执行的回调函数,参数名任意，参数用来接收服务器
+                //响应回来的值
+                dataType:"json",  //服务器响应回来的数据类型
+                success:function (data) {
+                    alert(data);
+                },
+                error:function () {  //服务器响应出错执行的回调函数，例如：请求路径错误，数据之间逗号没写
+                    alert("出错");
+                }
+                //最后一个值不要写逗号
+            })
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun();">
+</body>
+</html>

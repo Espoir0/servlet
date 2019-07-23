@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libs/c3p0-0.9.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/druid-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/mchange-commons-java-0.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/spring-jdbc-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/spring-tx-5.0.0.RELEASE.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/libs" recursive="false" />
+  </library>
+</component>

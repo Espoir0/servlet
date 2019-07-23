@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        div1
+    </div>
+
+    <script>
+        var div=document.getElementsByTagName("div")[0];
+        //var div=document.getElementById("div1");
+        var inner=div.innerHTML;
+
+        div.innerHTML="<input type='text'>";
+        div.innerHTML += "<input type='text'>";
+    </script>
+</body>
+</html>

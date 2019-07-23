@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id = "his" type="button" value="获取历史记录个数">
+<input id = "back" type="button" value="后退">
+<input id = "forward" type="button" value="前进">
+<a href="Demo7.html">07页面</a>
+
+<script>
+    var his=document.getElementById("his"); //获取按钮对象
+
+    his.onclick=function(){
+        var length=history.length;
+        alert(length);
+    }
+
+    var back=document.getElementById("back"); //获取按钮对象
+
+    back.onclick=function(){
+        history.back();
+        //history.go(-1);
+    }
+    var forward=document.getElementById("forward"); //获取按钮对象
+
+    forward.onclick=function(){
+            history.forward();
+            //history.go(1);
+        }
+
+</script>
+</body>
+</html>

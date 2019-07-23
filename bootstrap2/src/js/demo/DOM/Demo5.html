@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id ="openBtn" type="button" value="打开窗口" >
+<input id ="closeBtn" type="button" value="关闭窗口" >
+
+<script>
+    var openBtn=document.getElementById("openBtn");
+    var newWin;
+    openBtn.onclick=function(){
+        newWin=open("http://59.110.243.60:8080");
+    }
+
+
+    var closeBtn=document.getElementById("closeBtn");
+    close.onclick=function(){
+        newWin.close();   //谁调用关闭谁   window.close()
+    }
+</script>
+</body>
+</html>

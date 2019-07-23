@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var str="http://www.baidu.com?wd=西瓜";
+        var encode=encodeURI(str);
+        document.write(encode+"<br>");         //   http://www.baidu.com?wd=%E8%A5%BF%E7%93%9C
+
+        var s= decodeURI(encode);
+        document.write(s+"<br>");                  //   http://www.baidu.com?wd=西瓜
+
+
+        var encode1=encodeURIComponent(str);   //该方法编码更多
+        document.write(encode1+"<br>");  //    http%3A%2F%2Fwww.baidu.com%3Fwd%3D%E8%A5%BF%E7%93%9C
+
+        var s1= decodeURI(encode1);
+        document.write(s1+"<br>");     //     http%3A%2F%2Fwww.baidu.com%3Fwd%3D西瓜
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

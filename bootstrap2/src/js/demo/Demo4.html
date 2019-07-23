@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+        var num=Math.ceil(Math.random()*100);
+        var num2=Math.floor(Math.random()*100)+1;
+
+
+        var reg=new RegExp("\\w{6,12}");
+        var reg2=/^\w{6,12}$/;    //^ 表示开始， $表示结束   ，以单词字符开始，单词字符结束的 6-12位的字符串
+
+        var username="sfgggsr";
+        var flag=reg.test(username);
+        alert(flag);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

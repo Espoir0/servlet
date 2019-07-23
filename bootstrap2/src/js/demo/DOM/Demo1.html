@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img  id="light"  src="img/off.gif">
+    <h id="title">我心永恒</h>
+
+    <script async="true">
+        var light= document.getElementById("light");
+        alert("天黑请关灯");
+        light.src="img/on.gif";
+
+        var title=document.getElementById("title");
+        alert("换标题");
+        title.innerHTML="时不我待";
+    </script>
+
+</body>
+</html>

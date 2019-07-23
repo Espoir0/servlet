@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*分析
+        * 点击超连接或者图片更换验证码
+        * 1.给图片或者超链接绑定单击事件
+        * 2.重新设置图片的scr属性值*/
+        window.onload=function () {
+            var date=new Date().getTime();
+            //重新获取图片
+            var checkcode = document.getElementById("checkCode");
+            checkcode.src="http://localhost:8080/s/checkCodeServlet"+date;
+        }
+    </script>
+</head>
+<body>
+<img id="checkCode" src="http://localhost:8080/s/checkCodeServlet" alt="checkCode">
+<a id="change" href="">看不清，换一张</a>
+</body>
+</html>

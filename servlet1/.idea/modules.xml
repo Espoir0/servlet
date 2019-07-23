@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/servlet2/servlet2.iml" filepath="$PROJECT_DIR$/servlet2/servlet2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet_app/servlet_app.iml" filepath="$PROJECT_DIR$/servlet_app/servlet_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/tomcat/tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat_project/tomcat_project.iml" filepath="$PROJECT_DIR$/tomcat_project/tomcat_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userlogin/userlogin.iml" filepath="$PROJECT_DIR$/userlogin/userlogin.iml" />
+    </modules>
+  </component>
+</project>

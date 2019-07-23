@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+    window.onload=function(){
+        /*document.getElementById("username").onblur=function(){
+            alert("失去焦点了");
+            };
+        document.getElementById("username").onmouseover=function(){
+            alert("鼠标来了");
+            };*/
+        /*document.getElementById("username").onmousedown=function(){
+            alert("鼠标被按下了");
+            };*/
+       /* document.getElementById("username").onmousedown=function(event){
+            alert(event.button);   //0,1,2
+            };*/
+
+       /* document.getElementById("username").onkeydown=function(event){
+            alert(event.keyCode);   //0,1,2
+            if(event.keyCode==13){
+                alert("表单被提交");}
+            };*/
+       /*document.getElementById("love").onchange=function(event){
+            alert("改变了");
+
+            };*/
+
+        /*document.getElementById("form").onsubmit=function(){
+            var flag=false;
+            return flag
+        }*/
+    }
+
+        function checkForm(){
+            var flag=true;
+            return flag;
+        }
+
+</script>
+
+<form action="#" id="form" onclick="return checkForm();">
+<!--<form action="#" id="form">  第一种写法-->
+<input id="username" type="text" name="username">
+<select name="love" id="love">
+    <option value="" 请选择></option>
+    <option value=""> 美女</option>
+    <option value="">哈哈</option>
+</select>
+    <input type="submit" value="提交">
+</form>
+
+
+</body>
+</html>

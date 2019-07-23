@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+    <style>
+        p{
+            text-align:center;
+        }
+
+        span{
+            color:red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p><span id="time">5</span>秒后跳转到首页</p>
+
+    <script>
+    // 1.显示页面效果   <p></p>
+    // 2.1倒计时读秒效果实现
+    // 2.2  定义一个方法，获取span标签，修改span标签的内容，用来显示时间
+    //定义一个计时器，一秒执行一次
+    //数字变为0 跳转页面
+
+        var time=document.getElementById("time");
+
+        var num=5;
+        function fun(){
+            num--;
+            if(!num){
+                    location.href="http://59.110.243.60:8080";
+                }
+            time.innerHTML= num+"";
+
+        }
+        setInterval(fun,1000);
+    </script>
+</body>
+</html>
